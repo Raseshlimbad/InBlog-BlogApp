@@ -5,9 +5,10 @@ import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { SignoutSuccess } from "../redux/user/userSlice";
 import { useSelector } from "react-redux";
+import { HiOutlineUserGroup } from "react-icons/hi2";
 
 export default function DashSidebar() {
-  const { currentUser } = useSelector(state => state.user);
+  const { currentUser } = useSelector((state) => state.user);
   const location = useLocation();
   const dispatch = useDispatch();
   const [tab, setTab] = useState("");
@@ -43,7 +44,7 @@ export default function DashSidebar() {
             <Sidebar.Item
               active={tab === "profile"}
               icon={HiUser}
-              label={currentUser.isAdmin ? 'Admin' : 'User'}
+              label={currentUser.isAdmin ? "Admin" : "User"}
               labelColor="dark"
               as="div"
             >
@@ -52,11 +53,27 @@ export default function DashSidebar() {
           </Link>
 
           {currentUser.isAdmin && (
-          <Link to="/dashboard/?tab=posts">
-            <Sidebar.Item active={tab === "posts"} icon={HiDocumentText} as='div'>
-              Posts
-            </Sidebar.Item>
-          </Link>
+            <Link to="/dashboard/?tab=posts">
+              <Sidebar.Item
+                active={tab === "posts"}
+                icon={HiDocumentText}
+                as="div"
+              >
+                Posts
+              </Sidebar.Item>
+            </Link>
+          )}
+
+          {currentUser.isAdmin && (
+            <Link to="/dashboard/?tab=users">
+              <Sidebar.Item
+                active={tab === "users"}
+                icon={HiOutlineUserGroup}
+                as="div"
+              >
+                Users
+              </Sidebar.Item>
+            </Link>
           )}
 
           <Sidebar.Item
