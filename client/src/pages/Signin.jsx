@@ -62,7 +62,7 @@ export default function SignIn() {
         <div className="flex-1">
           <Link to="/" className="text-4xl font-bold dark:text-white">
             <span className="px-2 py-1 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 rounded-lg text-white">
-              Rasesh's
+              In
             </span>
             Blog
           </Link>

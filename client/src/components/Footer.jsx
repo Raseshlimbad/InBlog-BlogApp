@@ -13,7 +13,7 @@ export default function FooterCom() {
               className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
             >
               <span className="px-2 py-1 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 rounded-lg text-white">
-                Rasesh's
+                In
               </span>
               Blog
             </Link>
@@ -35,7 +35,7 @@ export default function FooterCom() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Rasesh's Blog
+                  In Blog
                 </Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -63,7 +63,7 @@ export default function FooterCom() {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:justify-between">
-            <Footer.Copyright href="#" by="Rasesh's blog" year={new Date().getFullYear()}/>
+            <Footer.Copyright href="#" by="In blog" year={new Date().getFullYear()}/>
             <div className="flex gap-6 sm:mt-0 mt-4 sm:justify-center">
                 <Footer.Icon href="#" icon={BsFacebook} />
                 <Footer.Icon href="#" icon={BsInstagram} />
