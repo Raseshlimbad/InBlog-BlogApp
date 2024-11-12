@@ -8,7 +8,7 @@ export default defineConfig({
       '/api' : {
         // target: 'http://localhost:3000',
         target: 'https://inblog-blog-app-api.vercel.app',
-        secure: false
+        secure: true
       },
     },
   },
