@@ -7,6 +7,7 @@ import postRoutes from './routes/post.route.js';
 import commentRoutes from './routes/comment.route.js';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import cors from 'cors';
 
 dotenv.config();
 mongoose.connect(process.env.MONGO , { useNewUrlParser: true, useUnifiedTopology: true, connectTimeoutMS: 30000 })
@@ -24,6 +25,14 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(cookieParser());
+
+app.use(cors(
+    {
+        origin: ["https://inblog-blogapp-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 app.listen(PORT, () => {
     console.log("Server started at PORT:" + PORT);
