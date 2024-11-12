@@ -2,7 +2,7 @@
   "name": "inblog-blogapp",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js",
@@ -22,5 +22,14 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.2",
     "nodemon": "^3.1.4"
+  },
+  "devDependencies": {},
+  "vercel": {
+    "builds": [
+      { "src": "api/index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "api/index.js" }
+    ]
   }
 }
