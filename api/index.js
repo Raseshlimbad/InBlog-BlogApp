@@ -28,7 +28,7 @@ app.use(cookieParser());
 
 app.use(cors(
     {
-        origin: ["https://inblog-blog-app-api.vercel.app/"],
+        origin: ["https://inblog-blog-app-api.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }

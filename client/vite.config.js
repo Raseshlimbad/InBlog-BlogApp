@@ -7,7 +7,7 @@ export default defineConfig({
     proxy: {
       '/api' : {
         // target: 'http://localhost:3000',
-        target: 'https://inblog-blog-app-api.vercel.app/',
+        target: 'https://inblog-blog-app-api.vercel.app',
         secure: false
       },
     },
