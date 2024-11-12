@@ -34,8 +34,12 @@ app.use(cors(
     }
 ));
 
-app.listen(PORT, () => {
-    console.log("Server started at PORT:" + PORT);
+// app.listen(PORT, () => {
+//     console.log("Server started at PORT:" + PORT);
+// })
+
+app.get("/", (req, res) => {
+    res.json("Hello");
 })
 
 app.use('/api/user', userRoutes);
